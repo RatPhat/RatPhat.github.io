@@ -1,0 +1,92 @@
+html, body {
+  min-height: 100%;
+  height: auto;
+  transition: all 0.375s;
+}
+html h1.drop, body h1.drop {
+  padding-bottom: 20px;
+}
+html li a, body li a {
+  text-decoration: none;
+  color: #fff;
+}
+html li a:hover, body li a:hover {
+  color: #7f7f7f;
+  transition: all 0.2s;
+}
+html .bg-dark, body .bg-dark {
+  background: radial-gradient(#555, #111);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+html .nav-list, body .nav-list {
+  width: 100%;
+  height: 100%;
+}
+html div, body div {
+  margin-top: 70px;
+  align-items: center;
+  text-shadow: 4px 4px 10px #000000;
+}
+
+ul {
+  list-style: none;
+}
+
+.grid-container {
+  grid-template-columns: auto auto auto;
+  display: grid;
+  column-gap: 50px;
+  width: clamp(200px, 100%, 1200px);
+}
+.grid-container li {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.grid-container li:not(:first-child) {
+  border-left: 1px solid #fff;
+  position: relative;
+  padding-left: 50px;
+}
+.grid-container .drop {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: calc(var(--order) * 100ms);
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
+}
+
+@media (max-width: 576px) {
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    column-gap: normal;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  .grid-container li:not(:first-child) {
+    border-left: 0;
+    padding-left: 0;
+    padding-top: 15px;
+  }
+}
+@media (min-width: 768px) {
+  .grid-container {
+    justify-content: space-evenly;
+  }
+  .grid-container li {
+    justify-content: space-evenly;
+    position: static;
+  }
+}/*# sourceMappingURL=style.css.map */
