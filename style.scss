@@ -71,8 +71,26 @@ $background-color2: #101214;
 }
 
 html, body {
+    box-sizing: border-box;
     min-height: 100%;
     height: auto; 
+
+    .container-fluid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        p {
+            padding-bottom: 50px;
+            color: $text-color;
+            word-spacing: 1px;
+            letter-spacing: 1px;
+            width: 35.7vw;
+            font-size: 20px;
+            text-align: center;
+        }
+    }
 
     h1.drop {
         padding-bottom: 20px;
@@ -85,6 +103,7 @@ html, body {
             text-decoration: none;
             color: $text-color;
             transition: all 0.250s;
+            letter-spacing: 1px;
         }
 
         a:hover {
@@ -171,6 +190,9 @@ ul {
         position: relative;
         padding-left: 50px;
     }
+}
+
+.index {
 
     .drop {
         opacity: 0;
@@ -217,8 +239,21 @@ ul {
 
 // Footer for other pages
 
-.footer {
-    background-color: #3c3e3a;
+.footer-2 {
+    background: #f8f7f2;
+    padding: 20px;
+    margin-top: 50px;
 }
 
 // //---| Home page CSS |---------------------------------------------------------------------
+.card {
+    background-color: $background-color1;
+    color: $text-color;
+    box-shadow: 4px 4px 10px #000000;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.bg-home {
+    background-color: $background-color2;
+}

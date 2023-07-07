@@ -4,8 +4,24 @@
 }
 
 html, body {
+  box-sizing: border-box;
   min-height: 100%;
   height: auto;
+}
+html .container-fluid, body .container-fluid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+html .container-fluid p, body .container-fluid p {
+  padding-bottom: 50px;
+  color: #c1a871;
+  word-spacing: 1px;
+  letter-spacing: 1px;
+  width: 35.7vw;
+  font-size: 20px;
+  text-align: center;
 }
 html h1.drop, body h1.drop {
   padding-bottom: 20px;
@@ -15,6 +31,7 @@ html li a, body li a {
   text-decoration: none;
   color: #c1a871;
   transition: all 0.25s;
+  letter-spacing: 1px;
 }
 html li a:hover, body li a:hover {
   color: #202020;
@@ -82,7 +99,8 @@ ul {
   position: relative;
   padding-left: 50px;
 }
-.grid-container .drop {
+
+.index .drop {
   opacity: 0;
   animation: fadeIn 1s ease forwards;
   animation-delay: calc(var(--order) * 100ms);
@@ -122,6 +140,20 @@ ul {
     position: static;
   }
 }
-.footer {
-  background-color: #3c3e3a;
+.footer-2 {
+  background: #f8f7f2;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.card {
+  background-color: #363f46;
+  color: #c1a871;
+  box-shadow: 4px 4px 10px #000000;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.bg-home {
+  background-color: #101214;
 }/*# sourceMappingURL=style.css.map */
